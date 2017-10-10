@@ -1,0 +1,34 @@
+%\VignetteIndexEntry{pcxnData}
+\documentclass{article}
+\usepackage{Sweave}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage[tableposition=top]{caption}
+\usepackage{ifthen}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage[usenames]{color}
+\definecolor{midnightblue}{rgb}{0.098,0.098,0.439}
+\fvset{listparameters={\setlength{\topsep}{0pt}}}
+\renewenvironment{Schunk}{\vspace{\topsep}}{\vspace{\topsep}}
+\setkeys{Gin}{width=\textwidth}
+\begin{document}
+\input{usingPathprintGEOData-concordance}
+\title{About pcxnData}
+\maketitle
+
+\section{Description}
+PCxN database contains correlation coefficients and p values between pre-defined
+gene sets within MSigDB H hallmark gene sets, MSigDB C2 CP (Canonical pathways),
+MSigDB C5 GO BP gene sets and Pathprint respectively
+
+\section{Using pathprintGEOData with pathprint package}
+
+The data in this package are primarily used by the pcxn package. For the 
+following examples to work, the pathprint package needs to be installed. For further explanations of some of the functions mentioned in the examples please refer to pcxn. 
+
+\begin{Schunk}
+\begin{Sinput}
+> # Use the pcxn library
+> library(pcxn)
+> library(pcxnData)

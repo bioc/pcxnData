@@ -10,12 +10,12 @@
 \alias{pathCor_pathprint_v1.2.3_dframe}
 \alias{pathprint.Hs.gs}
 \docType{package}
-\title{Pathway correlation coefficients and p values between pre-defined gene
+\title{Correlation coefficients and p values between pre-defined pathway/gene 
 sets}
 \description{
-PCxN database contains correlation coefficients and p values between pre-defined
-gene sets within MSigDB H hallmark gene sets, MSigDB C2 CP (Canonical pathways),
-MSigDB C5 GO BP gene sets and Pathprint respectively
+The pcxnData package contains correlation coefficients and p values between
+pre-defined gene sets within MSigDB H hallmark gene sets, MSigDB C2 CP 
+(Canonical pathways), MSigDB C5 GO BP gene sets and Pathprint respectively
 }
 \details{
 \tabular{ll}{
@@ -51,8 +51,7 @@ data(list = c("cp_gs_v5.1", "gobp_gs_v5.1", "h_gs_v5.1","pathprint.Hs.gs",
 }
 
 \format{
-The data.frames contain the following 4 variables for a different number of
-samples for every collection.
+A data frame contains the following columns.
 \describe{
     \item{\code{Pathway.A / Pathway.B}}{Columns that hold
     a pathway/gene set name}
@@ -87,7 +86,7 @@ objects()
 class(pathCor_pathprint_v1.2.3_dframe)
 class(cp_gs_v5.1)
 
-# Get object specifications
+# Get the first parts of the objects
 head(pathCor_pathprint_v1.2.3_dframe)
 head(cp_gs_v5.1)
 

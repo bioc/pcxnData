@@ -18,9 +18,9 @@
 \maketitle
 
 \section{Description}
-PCxN database contains correlation coefficients and p values between pre-defined
-gene sets within MSigDB H hallmark gene sets, MSigDB C2 CP (Canonical pathways),
-MSigDB C5 GO BP gene sets and Pathprint respectively
+The pcxnData package contains correlation coefficients and p values between 
+pre-defined gene sets within MSigDB H hallmark gene sets, MSigDB C2 CP 
+(Canonical pathways),MSigDB C5 GO BP gene sets and Pathprint respectively
 
 \section{Using pcxnData with pcxn package}
 

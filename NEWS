@@ -1,5 +1,5 @@
 **************************************************
-*              pcxnData 1.0.0 NEWS               *
+*              pcxnData 2.0.0 NEWS               *
 **************************************************
 
 - Added to the Bioconductor for the first time in October 2017
@@ -8,4 +8,4 @@
 http://pcxn.org:8080/): MSigDB H hallmark, MSigDB C2 (Canonical pathways), 
 MSigDB C5 GO BP and Pathprint)
 
-
+- February 2018 included pathway correlation unadjusted for overlapping genes

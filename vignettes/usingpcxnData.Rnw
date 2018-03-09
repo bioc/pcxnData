@@ -15,12 +15,15 @@
 \begin{document}
 \SweaveOpts{concordance=TRUE}
 \title{About pcxnData}
+\author{Sokratis Kariotis, Yered Pita-Juarez, Winston Hide, Wenbin Wei}
 \maketitle
 
 \section{Description}
-The pcxnData package contains correlation coefficients and p values between 
+The pcxnData package contains correlation coefficients and p values between
 pre-defined gene sets within MSigDB H hallmark gene sets, MSigDB C2 CP 
-(Canonical pathways),MSigDB C5 GO BP gene sets and Pathprint respectively
+(Canonical pathways), MSigDB C5 GO BP gene sets and Pathprint respectively. In 
+addition to the unadjusted pathway correlations, this package provides those 
+that were adjusted to account for the shared genes between pathway pairs
 
 \section{Using pcxnData with pcxn package}
 
@@ -37,13 +40,17 @@ library(pcxnData)
 # Load  the data
 ds = c("cp_gs_v5.1", "gobp_gs_v5.1", "h_gs_v5.1","pathprint.Hs.gs",
     "pathCor_CPv5.1_dframe","pathCor_GOBPv5.1_dframe","pathCor_Hv5.1_dframe",
-    "pathCor_pathprint_v1.2.3_dframe")
+    "pathCor_pathprint_v1.2.3_dframe","pathCor_CPv5.1_unadjusted_dframe",
+    "pathCor_GOBPv5.1_unadjusted_dframe","pathCor_Hv5.1_unadjusted_dframe",
+    "pathCor_pathprint_v1.2.3_unadjusted_dframe")
+
 data(list = ds)
 
 # Explore the static extendable network by focusing on single pathways and their
 # 10 most correlated neighbours in the pathprint collection
 pcxn.obj <- pcxn_explore(collection = "pathprint",
                     query_geneset = "Alzheimer's disease (KEGG)",
+                    adj_overlap = FALSE,
                     top = 10,
                     min_abs_corr = 0.05,
                     max_pval = 0.05)
@@ -55,6 +62,7 @@ pcxn.obj <- pcxn_analyze(collection = "pathprint",
                                     "ACE Inhibitor Pathway (Wikipathways)",
                                     "AR down reg. targets (Netpath)"),
             phenotype_1_genesets = c("DNA Repair (Reactome)"),
+            adj_overlap = FALSE,
             top = 10,
             min_abs_corr = 0.05,
             max_pval = 0.05 )

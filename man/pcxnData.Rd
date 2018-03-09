@@ -9,20 +9,26 @@
 \alias{pathCor_Hv5.1_dframe}
 \alias{pathCor_pathprint_v1.2.3_dframe}
 \alias{pathprint.Hs.gs}
+\alias{pathCor_CPv5.1_unadjusted_dframe}
+\alias{pathCor_GOBPv5.1_unadjusted_dframe}
+\alias{pathCor_Hv5.1_unadjusted_dframe}
+\alias{pathCor_pathprint_v1.2.3_unadjusted_dframe}
 \docType{package}
 \title{Correlation coefficients and p values between pre-defined pathway/gene 
 sets}
 \description{
 The pcxnData package contains correlation coefficients and p values between
 pre-defined gene sets within MSigDB H hallmark gene sets, MSigDB C2 CP 
-(Canonical pathways), MSigDB C5 GO BP gene sets and Pathprint respectively
+(Canonical pathways), MSigDB C5 GO BP gene sets and Pathprint respectively. In 
+addition to the unadjusted pathway correlations, this package provides those 
+that were adjusted to account for the shared genes between pathway pairs.
 }
 \details{
 \tabular{ll}{
 Package: \tab pcxnData\cr
 Type: \tab Package\cr
-Version: \tab 1.0.0\cr
-Date: \tab 2017-10-31\cr
+Version: \tab 2.0.0\cr
+Date: \tab 2018-2-1\cr
 License: \tab MIT\cr
 }
 }
@@ -31,8 +37,8 @@ Sokratis Kariotis, Yered Pita-Juarez, Winston Hide, Wenbin Wei
 \cr Maintainer: Sokratis Kariotis \email{s.kariotis@sheffield.ac.uk}
 }
 \value{
-Includes dataframes containing correlation between two pathways withdrawn from 
-one of four collections: MSigDB H hallmark gene sets, 
+Includes dataframes containing adjusted and unadjusted correlation between two 
+pathways drawn from one of four collections: MSigDB H hallmark gene sets, 
 MSigDB C2 CP (Canonical pathways), MSigDB C5 GO BP gene sets and Pathprint. 
 For each of the above collections the package includes a list that holds the 
 members of each pathway/gene set. 
@@ -47,7 +53,9 @@ Relationships."
 \usage{
 data(list = c("cp_gs_v5.1", "gobp_gs_v5.1", "h_gs_v5.1","pathprint.Hs.gs",
     "pathCor_CPv5.1_dframe","pathCor_GOBPv5.1_dframe","pathCor_Hv5.1_dframe",
-    "pathCor_pathprint_v1.2.3_dframe"))
+    "pathCor_pathprint_v1.2.3_dframe","pathCor_CPv5.1_unadjusted_dframe",
+    "pathCor_GOBPv5.1_unadjusted_dframe","pathCor_Hv5.1_unadjusted_dframe",
+    "pathCor_pathprint_v1.2.3_unadjusted_dframe"))
 }
 
 \format{
@@ -70,11 +78,14 @@ A data frame contains the following columns.
 # Load all data
 data(list = c("cp_gs_v5.1", "gobp_gs_v5.1", "h_gs_v5.1","pathprint.Hs.gs",
     "pathCor_CPv5.1_dframe","pathCor_GOBPv5.1_dframe","pathCor_Hv5.1_dframe",
-    "pathCor_pathprint_v1.2.3_dframe"))
+    "pathCor_pathprint_v1.2.3_dframe","pathCor_CPv5.1_unadjusted_dframe",
+    "pathCor_GOBPv5.1_unadjusted_dframe","pathCor_Hv5.1_unadjusted_dframe",
+    "pathCor_pathprint_v1.2.3_unadjusted_dframe"))
 
 # Load an object containing correlation coefficients,p values, overlap
-# coefficients and adjusted p values
+# coefficients and adjusted p values and the corresponding unadjsuted one
 data("pathCor_pathprint_v1.2.3_dframe")
+data("pathCor_pathprint_v1.2.3_unadjusted_dframe")
 
 # Load an object containing the gene members of each gene set in a collection
 data("cp_gs_v5.1")

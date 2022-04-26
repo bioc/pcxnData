@@ -1,5 +1,5 @@
 Package: pcxnData
-Version: 2.18.0
+Version: 2.19.0
 Title: Correlation coefficients and p values between pre-defined pathway/gene sets
 Description: PCxN database contains correlation coefficients and p values between pre-defined gene sets within MSigDB H hallmark gene sets, MSigDB C2 CP (Canonical pathways), MSigDB C5 GO BP gene sets and Pathprint respectively, as well as adjusted pathway correlations to account for the shared genes between pathway pairs.
 Author: Sokratis Kariotis, Yered Pita-Juarez, Wenbin Wei, Winston Hide
